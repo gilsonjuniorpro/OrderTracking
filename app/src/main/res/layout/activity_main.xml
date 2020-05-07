@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ivOrderPlaced"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/icPlaced"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        app:srcCompat="@drawable/ic_placed"
+        android:contentDescription="@string/image_order_placed" />
+
+    <View
+        android:id="@+id/icPlaced"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/shape_status_completed"
+        app:layout_constraintBottom_toBottomOf="@+id/ivOrderPlaced"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivOrderPlaced" />
+
+    <TextView
+        android:id="@+id/tvTitlePlaced"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/order_placed"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/ivOrderPlaced"
+        app:layout_constraintTop_toTopOf="@+id/ivOrderPlaced" />
+
+    <TextView
+        android:id="@+id/tvPlacedInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/we_have_received_your_order"
+        app:layout_constraintStart_toStartOf="@+id/tvTitlePlaced"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitlePlaced" />
+
+    <ImageView
+        android:id="@+id/ivOrderConfirmed"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/icConfirmed"
+        app:layout_constraintTop_toBottomOf="@+id/ivOrderPlaced"
+        app:srcCompat="@drawable/ic_confirmed"
+        android:contentDescription="@string/image_order_confirmed" />
+
+    <View
+        android:id="@+id/icConfirmed"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/shape_status_completed"
+        app:layout_constraintBottom_toBottomOf="@+id/ivOrderConfirmed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivOrderConfirmed" />
+
+    <TextView
+        android:id="@+id/tvTitleConfirmed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/order_confirmed"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/ivOrderConfirmed"
+        app:layout_constraintTop_toTopOf="@+id/ivOrderConfirmed" />
+
+    <TextView
+        android:id="@+id/tvConfirmedInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/your_order_has_been_confirmed"
+        app:layout_constraintStart_toStartOf="@+id/tvTitleConfirmed"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleConfirmed" />
+
+    <ImageView
+        android:id="@+id/ivOrderProcessed"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/icConfirmed"
+        app:layout_constraintTop_toBottomOf="@+id/ivOrderConfirmed"
+        app:srcCompat="@drawable/ic_prepared"
+        android:contentDescription="@string/image_order_processed" />
+
+    <View
+        android:id="@+id/icProcessed"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/shape_status_current"
+        app:layout_constraintBottom_toBottomOf="@+id/ivOrderProcessed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivOrderProcessed" />
+
+    <TextView
+        android:id="@+id/tvTitleProcessed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/order_processed"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/ivOrderProcessed"
+        app:layout_constraintTop_toTopOf="@+id/ivOrderProcessed" />
+
+    <TextView
+        android:id="@+id/tvProcessedInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/we_are_preparing_your_order"
+        app:layout_constraintStart_toStartOf="@+id/tvTitleProcessed"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleProcessed" />
+
+    <ImageView
+        android:id="@+id/ivOrderReady"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:alpha="0.5"
+        app:layout_constraintStart_toEndOf="@+id/icReady"
+        app:layout_constraintTop_toBottomOf="@+id/ivOrderProcessed"
+        app:srcCompat="@drawable/ic_ready"
+        android:contentDescription="@string/image_order_ready" />
+
+    <View
+        android:id="@+id/icReady"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="32dp"
+        android:alpha="0.5"
+        android:background="@drawable/shape_status_remaining"
+        app:layout_constraintBottom_toBottomOf="@+id/ivOrderReady"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivOrderReady" />
+
+    <TextView
+        android:id="@+id/tvTitleReady"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:alpha="0.5"
+        android:text="@string/ready_for_pickup"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/ivOrderReady"
+        app:layout_constraintTop_toTopOf="@+id/ivOrderReady" />
+
+    <TextView
+        android:id="@+id/tvReadyInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:alpha="0.5"
+        android:text="@string/your_order_is_ready_for_pickup"
+        app:layout_constraintStart_toStartOf="@+id/tvTitleReady"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleReady" />
+
+    <View
+        android:id="@+id/barPlacedToConfirmed"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/icConfirmed"
+        app:layout_constraintEnd_toEndOf="@+id/icPlaced"
+        app:layout_constraintStart_toStartOf="@+id/icPlaced"
+        app:layout_constraintTop_toBottomOf="@+id/icPlaced" />
+
+    <TextView
+        android:id="@+id/barConfirmedToProcessed"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/icProcessed"
+        app:layout_constraintEnd_toEndOf="@+id/icConfirmed"
+        app:layout_constraintStart_toStartOf="@+id/icConfirmed"
+        app:layout_constraintTop_toBottomOf="@+id/icConfirmed" />
+
+    <TextView
+        android:id="@+id/barProcessedToReady"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:alpha="0.5"
+        android:background="@color/colorRemaining"
+        app:layout_constraintBottom_toTopOf="@+id/icReady"
+        app:layout_constraintEnd_toEndOf="@+id/icProcessed"
+        app:layout_constraintStart_toStartOf="@+id/icProcessed"
+        app:layout_constraintTop_toBottomOf="@+id/icProcessed" />
+
+    <LinearLayout
+        android:id="@+id/layoutTop"
+        android:layout_width="0dp"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/icon_back" />
+
+        <TextView
+            android:id="@+id/tvTitleBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:text="@string/track_order"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCancelBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:text="@string/cancel"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvEstimated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/estimated_time"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tvOrderNumber"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTop" />
+
+    <TextView
+        android:id="@+id/tvOrderNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/order_number"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvEstimated"
+        app:layout_constraintTop_toTopOf="@+id/tvEstimated" />
+
+    <TextView
+        android:id="@+id/tvMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/thirty_minutes"
+        app:layout_constraintEnd_toEndOf="@+id/tvEstimated"
+        app:layout_constraintStart_toStartOf="@+id/tvEstimated"
+        app:layout_constraintTop_toBottomOf="@+id/tvEstimated" />
+
+    <TextView
+        android:id="@+id/tvNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/code_order"
+        app:layout_constraintEnd_toEndOf="@+id/tvOrderNumber"
+        app:layout_constraintStart_toStartOf="@+id/tvOrderNumber"
+        app:layout_constraintTop_toBottomOf="@+id/tvOrderNumber" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMinutes" />
+</androidx.constraintlayout.widget.ConstraintLayout>
